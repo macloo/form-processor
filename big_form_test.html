@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Form Test</title>
+    <style>
+        /* styles for a div on this page */
+        #results { width: 500px; margin-right: 50px; float: right; }
+    </style>
+</head>
+<body>
+
+<h1>Big Form Test</h1>
+
+<!-- an empty div with an empty paragraph inside -->
+<div id="results"><p id="results_text"></p></div>
+
+<!-- the form -->
+<form id="myForm" action="/echo/html/" method="post">
+
+<p>
+    <label for="theName">Your character name:</label>
+    <input type="text" name="theName" id="theName">
+</p>
+<p>
+    <label for="theAnimal">Your special animal:</label>
+    <input type="text" name="theAnimal" id="theAnimal">
+</p>
+<p>Your favorite color:
+    <label>
+        <input type="radio" name="color" id="color1" value="red">Red</label>
+    <label>
+        <input type="radio" name="color" id="color2" value="green">Green</label>
+    <label>
+        <input type="radio" name="color" id="color3" value="blue">Blue</label>
+    <label>
+        <input type="radio" name="color" id="color4" value="yellow">Yellow</label>
+</p>
+<p>Choose your weapons:</p>
+<p>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon1" value="knife">Knife</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon2" value="grenade">Grenade</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon3" value="pistol">Pistol</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon4" value="rifle">Rifle</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon5" value="sword">Sword</label>
+</p>
+<p>Write a brief description of your character's appearance:</p>
+<textarea name="appearance" id="appearance"></textarea>
+
+<p>Select at least two potions from this menu:</p>
+<select multiple name="potions" id="potions">
+    <option value="" selected></option>
+    <option value="health">Extra Health</option>
+    <option value="strength">Extra Strength</option>
+    <option value="life">Extra Life</option>
+    <option value="magic">Extra Magic</option>
+    <option value="wisdom">Extra Wisdom</option>
+    <option value="courage">Extra Courage</option>
+    <option value="compassion">Extra Compassion</option>
+</select>
+
+  <!-- final buttons at end of form -->
+<p>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</p>
+</form> <!-- end of form -->
+
+<!-- this script MUST be at bottom! -->
+<script src="js/processor_v4.js"></script>
+</body>
+</html>

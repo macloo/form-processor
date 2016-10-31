@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz Format</title>
+    <style>
+        /* styles for a div on this page */
+        #results {
+          width: 500px;
+          margin-right: 50px;
+          float: right;
+          font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz Format</h1>
+
+<!-- an empty div with an empty paragraph inside -->
+<div id="results"><p id="results_text"></p></div>
+
+<p>Fill in any answers to see how the processor script handles the quiz.</p>
+
+<!-- the form -->
+<form id="myForm" action="/echo/html/" method="post">
+
+<p>
+    <label for="theName">1. Your character name:</label>
+    <input type="text" name="theName" id="theName">
+</p>
+<p>
+    <label for="theAnimal">2. Your special animal:</label>
+    <input type="text" name="theAnimal" id="theAnimal">
+</p>
+<p>3. Your favorite color:
+    <label>
+        <input type="radio" name="color" id="color1" value="gray">Gray</label>
+    <label>
+        <input type="radio" name="color" id="color2" value="brown">Brown</label>
+    <label>
+        <input type="radio" name="color" id="color3" value="green">Green</label>
+    <label>
+        <input type="radio" name="color" id="color4" value="yellow">Yellow</label>
+</p>
+<p>4. Choose your weapons:</p>
+<p>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon1" value="knife">Knife</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon2" value="walking stick">Walking Stick</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon3" value="small pistol">Small Pistol</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon4" value="rifle">Rifle</label>
+    <label>
+        <input type="checkbox" name="weapon" id="weapon5" value="sword">Sword</label>
+</p>
+<p>5. Write a brief description of your character's appearance:</p>
+<textarea name="appearance" id="appearance"></textarea>
+
+<p>6. Select at least two potions from this menu:</p>
+<select multiple name="potions" id="potions">
+    <option value="" selected></option>
+    <option value="health">Extra Health</option>
+    <option value="strength">Extra Strength</option>
+    <option value="life">Extra Life</option>
+    <option value="magic">Extra Magic</option>
+    <option value="wisdom">Extra Wisdom</option>
+    <option value="courage">Extra Courage</option>
+    <option value="compassion">Extra Compassion</option>
+</select>
+
+  <!-- final buttons at end of form -->
+<p>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</p>
+</form> <!-- end of form -->
+
+<!-- this script MUST be at bottom! -->
+<script src="js/processor_v7.js"></script>
+</body>
+</html>
