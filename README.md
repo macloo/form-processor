@@ -43,3 +43,5 @@ I changed the name of the `id` into which the answers are written:
 And this is the line of HTML in the Bootstrap-styled page (line 129) where they will be written:
 
 ![Screen capture: HTML code](images/html_img.png)
+
+Here is [a gist for version 7](https://gist.github.com/macloo/c98cc4ab74ab824b806117f94234615c) with extra instructions for beginners.
