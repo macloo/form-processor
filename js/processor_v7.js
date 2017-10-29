@@ -1,14 +1,14 @@
-// form processor - October 2016 version
+// form processor - October 2017 version
 // this script processes your form data locally only - no server
 // this works with a form for which the opening tag is:
-// <form id="myForm" action="/echo/html/" method="post">
+// <form id="myForm" action="processor_v7.js" method="post">
 
 /*
    This version is based almost completely on processor_v6.js
 
    Differences:
    testMultipleItemAnswer() function has been moved out of writeMessage()
-   correctAnswers specific to quiz_version.html 
+   correctAnswers specific to quiz_version.html
 */
 
 var form = document.getElementById("myForm");
@@ -136,7 +136,7 @@ function writeMessage() {
     }
   }
   // close the list element in the message string
-  msg += "</ol>"
+  msg += "</ol>";
 
   // writes message into the paragraph with id="results_text"
   document.getElementById("results_text").innerHTML = msg;
@@ -148,7 +148,7 @@ function writeMessage() {
 function testMultipleItemAnswer( theKey ) {
     var correctItems = [];
     var missingItems = [];
-    var count = 0
+    var count = 0;
     // check each item in the correctAnswers array
     for (var i = 0; i < correctAnswers[ theKey ].length; i++) {
         for (var j = 0; j < userAnswers[ theKey ].length; j++) {
@@ -167,12 +167,13 @@ function testMultipleItemAnswer( theKey ) {
           count = 0;
         }
     }
+    var msgAdd;
     if ( userAnswers[ theKey ].length > correctAnswers[ theKey ].length ) {
-      var msgAdd = "<li>You chose extra items for " + theKey + ".</li>";
+      msgAdd = "<li>You chose extra items for " + theKey + ".</li>";
     } else if ( correctItems.length == correctAnswers[ theKey ].length ) {
-      var msgAdd = "<li>Your choices for " + theKey + " were all correct: " + userAnswers[ theKey ] + "</li>";
+      msgAdd = "<li>Your choices for " + theKey + " were all correct: " + userAnswers[ theKey ] + "</li>";
     } else {
-      var msgAdd = "<li>In your choices for " + theKey + ", you were missing: " + missingItems + "</li>";
+      msgAdd = "<li>In your choices for " + theKey + ", you were missing: " + missingItems + "</li>";
     }
     return msgAdd;
 } // end of testMultipleItemAnswer() function
@@ -184,10 +185,11 @@ function addPairToAssocArray(n, v) {
 
 // writes multiple values into an array value in the Object named userAnswers
 function addMultipleToAssocArray(n, v) {
+  var found = false;
   // loop through all keys and check if n already exists
   for ( var key in userAnswers ) {
     if (key === n) {
-      var found = true;
+      found = true;
     }
   }
   // if n does not exist, create it as an array

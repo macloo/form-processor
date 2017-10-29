@@ -1,7 +1,7 @@
-// form processor - October 2016 version
+// form processor - October 2017 version
 // this script processes your form data locally only - no server
 // this works with a form for which the opening tag is:
-// <form id="myForm" action="/echo/html/" method="post">
+// <form id="myForm" action="processor_v5.js" method="post">
 
 /*
    This version is based almost completely on processor_v4.js
@@ -9,7 +9,7 @@
    Differences:
    The writeMessage() function
    The parseArrayElements() function
-   
+
 */
 
 var form = document.getElementById("myForm");
@@ -112,7 +112,7 @@ function writeMessage() {
   msg += ", carries a " + weapons + ". ";
   msg += warrior + ", clad all in " + color;
   msg += ", is accompanied by a faithful " + animal;
-  msg += " and protected by potions for " + potions + "."
+  msg += " and protected by potions for " + potions + ".";
 
   // writes message into the paragraph with id="results_text"
   document.getElementById("results_text").innerHTML = msg;
@@ -143,10 +143,11 @@ function addPairToAssocArray(n, v) {
 
 // writes multiple values into an array value in the Object named userAnswers
 function addMultipleToAssocArray(n, v) {
+  var found = false;
   // loop through all keys and check if n already exists
   for ( var key in userAnswers ) {
     if (key === n) {
-      var found = true;
+      found = true;
     }
   }
   // if n does not exist, create it as an array
