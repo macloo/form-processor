@@ -28,9 +28,9 @@ When that looping and storing is complete, the script can access any name and it
 
 ## How to use one of these scripts with your own form
 
-If you use [version 5](js/processor_v5.js), the script will write a paragraph. You will edit the function `writeMessage()` (line 102) to use your own form element names. You will not need to change *anything* outside that function! Note that in line 118, either "results_text" must be the `id` of a `p` element within your HTML, or you'll need to re-script how the paragraph gets written onto your page.
+If you use [version 5](js/processor_v5.js), the script will write a paragraph. You will edit the function `writeMessage()` (line 102) to use your own form element names. You will not need to change *anything* outside that function! Note that in line 118, either "results_text" must be the `id` of a `p` element within your HTML, or you'll need to re-script how the paragraph gets written onto your page. See an [example form](https://macloo.github.io/form-processor/choose_and_read.html).
 
-If you use [version 7](js/processor_v7.js), you'll need to rewrite only the names and values within the `correctAnswers` object (line 23), and on line 142 is the `id` for a `div` into which the results will be written. If you have an empty `div` with `id="results_text"`, you won't need to change line 142. Nothing else needs to be altered in the script.
+If you use [version 7](js/processor_v7.js), you'll need to rewrite only the names and values within the `correctAnswers` object (line 23), and on line 142 is the `id` for a `div` into which the results will be written. If you have an empty `div` with `id="results_text"`, you won't need to change line 142. Nothing else needs to be altered in the script. See an [example form](https://macloo.github.io/form-processor/quiz_version.html).
 
 ## A version for quick use
 
