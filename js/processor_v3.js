@@ -1,7 +1,7 @@
-// form processor - October 2016 version
+// form processor - October 2017 version
 // this script processes your form data locally only - no server
 // this works with a form for which the opening tag is:
-// <form id="myForm" action="/echo/html/" method="post">
+// <form id="myForm" action="processor_v3.js" method="post">
 
 // this version still has nested switch-statements
 
@@ -14,7 +14,7 @@ form.onsubmit = checkAnswers;
 
 function checkAnswers() {
   if (!form || form.nodeName !== "FORM") {
-    alert("There is no form!);")
+    alert("There is no form!");
     return;
   }
   // create an empty array
