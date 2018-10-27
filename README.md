@@ -10,7 +10,7 @@ This seemed necessary to me because beginner coders have trouble sorting out the
 
 3. [choose_and_read.html](https://macloo.github.io/form-processor/choose_and_read.html) takes your form answers and writes a paragraph, sort of like **Mad Libs**, in the floated-right `div`. It uses version 5 of the processor script. *This is a fun one to try.*
 
-4. [quiz_version.html](https://macloo.github.io/form-processor/quiz_version.html) uses version 7 of the processor script. Here it treats the form like a **quiz** and tells you what you did and did not answer correctly. For this to work, you must go into the script for processor_v7.js and write the name-value pair for each correct answer. Checkboxes and multiple-select elements are handled as arrays.
+4. [quiz_version.html](https://macloo.github.io/form-processor/quiz_version.html) (updated 10/27/18 for ES6) uses version 8 of the processor script. Here it treats the form like a **quiz** and tells you what you did and did not answer correctly. For this to work, you must go into the script for processor_v8_gist.js and write the name-value pair for each correct answer. Checkboxes and multiple-select elements are handled as arrays.
 
 5. [shoes.html](https://macloo.github.io/form-processor/shoes.html) uses almost the same script; its name is processor_v7_shoes.js. It has a different set of name-value pairs, and if you compare it to processor_v7.js you'll probably understand how that is done. It acts like the form is a quiz even though it isn't, really.
 
@@ -34,4 +34,4 @@ If you use [version 7](js/processor_v7.js), you'll need to rewrite only the name
 
 ## A version for quick use
 
-Here is [a gist for version 7](https://gist.github.com/macloo/c98cc4ab74ab824b806117f94234615c) with extra instructions for beginners in the comments. This version treats the form like a **quiz**, so you will add in the correct answers for your quiz to make it work.
+Here is [a gist for version 8](https://gist.github.com/macloo/c98cc4ab74ab824b806117f94234615c) with extra instructions for beginners in the comments. This version treats the form like a **quiz**, so you will add in the correct answers for your quiz to make it work.
