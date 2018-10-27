@@ -4,6 +4,16 @@ The goal was to adapt a form-processor script written in JavaScript so that begi
 
 This seemed necessary to me because beginner coders have trouble sorting out the `type`, `name`, `id` and `value` attributes of HTML form controls.
 
+## A version for quick use
+
+Here is [a gist for version 8](https://gist.github.com/macloo/c98cc4ab74ab824b806117f94234615c) with extra instructions for beginners in the comments. This version treats the form like a **quiz**, so you will add in the correct answers for your quiz to make it work.
+
+If you want to give this script to students in a simple way, just send them this URL: [http://bit.ly/mm-formproc](http://bit.ly/mm-formproc)
+
+It's a Google doc with a brief explanation and a link to the gist.
+
+## Explanations for this repo
+
 1. [form_test.html](https://macloo.github.io/form-processor/form_test.html) uses version 1 of the processor script. It just pops alerts for each name-value pair from the form.
 
 2. [big_form_test.html](https://macloo.github.io/form-processor/big_form_test.html) uses version 4 of the processor script. It writes all the name-value pairs from the form into a `div` that's floated right.
@@ -31,7 +41,3 @@ When that looping and storing is complete, the script can access any name and it
 If you use [version 5](js/processor_v5.js), the script will write a paragraph. You will edit the function `writeMessage()` (line 102) to use your own form element names. You will not need to change *anything* outside that function! Note that in line 118, either "results_text" must be the `id` of a `p` element within your HTML, or you'll need to re-script how the paragraph gets written onto your page. See an [example form](https://macloo.github.io/form-processor/choose_and_read.html).
 
 If you use [version 7](js/processor_v7.js), you'll need to rewrite only the names and values within the `correctAnswers` object (line 23), and on line 142 is the `id` for a `div` into which the results will be written. If you have an empty `div` with `id="results_text"`, you won't need to change line 142. Nothing else needs to be altered in the script. See an [example form](https://macloo.github.io/form-processor/quiz_version.html).
-
-## A version for quick use
-
-Here is [a gist for version 8](https://gist.github.com/macloo/c98cc4ab74ab824b806117f94234615c) with extra instructions for beginners in the comments. This version treats the form like a **quiz**, so you will add in the correct answers for your quiz to make it work.
