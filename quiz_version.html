@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz Format</title>
     <style>
-        body { margin: 50px; }
-
+        body { margin: 2rem; }
         /* styles for a div on this page */
         #results {
           width: 500px;
-          padding-right: 50px;
           float: right;
-          font-size: 150%;
+          font-size: 120%;
         }
+        li { line-height: 1.5; }
     </style>
 </head>
 <body>
@@ -25,8 +24,8 @@
 
 <p>Fill in any answers to see how the processor script handles the quiz.</p>
 
-<!-- the form -->
-<form id="myForm" action="js/processor_v7.js" method="post">
+<!-- the form - js/processor_v7.js -->
+<form id="myForm" action="js/processor_v8_gist.js" method="post">
 
 <p>
     <label for="theName">1. Your character name:</label>
